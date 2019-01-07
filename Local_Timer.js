@@ -7,7 +7,7 @@ function timer(){
         if(day === 2) day = "Thuasday";
         if(day === 3) day = "Wendesday";
         if(day === 4) day = "Thursday";
-        if(day === 5) day = "Friday";
+        if(day === sd5) day = "Friday";
         if(day === 6) day = "Saturday";
         if(day === 7) day = "Sunday";
     var which = today.getDate();
