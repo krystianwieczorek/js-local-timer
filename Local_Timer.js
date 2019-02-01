@@ -3,27 +3,10 @@ function timer(){
     let today = new Date();
     
     let day = today.getDay();
-        if(day === 1) day = "Monday";
-        if(day === 2) day = "Thuasday";
-        if(day === 3) day = "Wendesday";
-        if(day === 4) day = "Thursday";
-        if(day === 5) day = "Friday";
-        if(day === 6) day = "Saturday";
-        if(day === 7) day = "Sunday";
+    let days = ['Poniedziałek', 'Wtorek','Środa','Czwartek','Piątek','Sobota','Niedziela'];
     let which = today.getDate();
-    let month = today.getMonth()+1;
-        if(month === 1) month = "January";
-        if(month === 2) month = "February";
-        if(month === 3) month = "March";
-        if(month === 4) month = "April";
-        if(month === 5) month = "May";
-        if(month === 6) month = "June";
-        if(month === 7) month = "July";
-        if(month === 8) month = "August";
-        if(month === 9) month = "September";
-        if(month === 10) month = "October";
-        if(month === 11) month = "November";
-        if(month === 12) month = "December";
+    let month = today.getMonth();
+    let months = ['Styczeń','Luty','Marzec','Kwiecień','Maj','Czerwiec','Lipiec','Sierpień','Wrzesień','Październik','Listopad','Grudzień'];
     let year = today.getFullYear();
     
     let hours = today.getHours();
@@ -34,7 +17,7 @@ function timer(){
     if(seconds<10) seconds = "0"+seconds;
     
     document.getElementById("clock").innerHTML =
-        day+" "+which+"/"+month+"/"+year+"  |  "+hours+":"+minutes+":"+seconds;
+        days[day-1]+" "+which+"/"+months[month]+"/"+year+"  |  "+hours+":"+minutes+":"+seconds;
     
     setTimeout("timer()",1000);
     
